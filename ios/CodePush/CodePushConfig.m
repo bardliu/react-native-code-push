@@ -29,7 +29,7 @@ static NSString * const PublicKeyKey = @"publicKey";
 - (instancetype)init
 {
     self = [super init];
-    NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
+    NSDictionary *infoDictionary = [[NSBundle bundleWithIdentifier:@"openrice.ORConnect"] infoDictionary];
 
     NSString *appVersion = [infoDictionary objectForKey:@"CFBundleShortVersionString"];
     NSString *buildVersion = [infoDictionary objectForKey:(NSString *)kCFBundleVersionKey];
